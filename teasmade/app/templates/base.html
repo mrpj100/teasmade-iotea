@@ -1,10 +1,29 @@
-<html>
-	<head>
-	<title>Teasmade - {{title}}</title>
-	</head>
-	<body>
-	<div><a href="/index">Teasmade</a>: <a href="/teanow">Tea</a> <a href="/light">Light</a> <a href="/music">Music</a> <a href="/alarm">Alarm</a> <a href="/coffee">Coffee</a></div>
-	<hr>
-	{% block content %}{% endblock %}
-	</body>
-</html>
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+	Teasmade - {{title}}
+{% endblock %}
+
+
+{% block navbar %}
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+           <a class="navbar-brand" href="{{ url_for('index') }}">Teasmade</a>
+	   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      	      <span class="navbar-toggler-icon"></span>
+ 	   </button>
+	   
+	   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	         <ul class="nav navbar-nav mr-auto">
+			<li class="nav-item active"><a href="{{ url_for('teanow') }}">{{ ('Tea') }}</a></li>
+			<li class="nav-item"><a href="{{ url_for('light') }}">{{ ('Light') }}</a></li>
+			<li class="nav-item"><a href="{{ url_for('music') }}">{{ ('Music') }}</a></li>
+			<li class="nav-item"><a href="{{ url_for('setAlarm') }}">{{ ('Alarm') }}</a></li>
+			<li class="nav-item"><a href="{{ url_for('error418') }}">{{ ('Coffee') }}</a></li>
+	         </ul>
+	   </div>
+	</nav>
+{% endblock %}
+
+{% block content %}
+	{% block app_content %}{% endblock %}
+{% endblock %}

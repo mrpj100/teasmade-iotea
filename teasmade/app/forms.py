@@ -2,10 +2,11 @@ from flask.ext.wtf import Form
 from wtforms import RadioField, SubmitField, BooleanField, IntegerField
 
 class TeaNowForm(Form):
-	pass
+	submit = SubmitField("Tea Now!")
 
 class LightChoiceForm(Form):
 	radio = RadioField(choices=[("on", "On"), ("off", "Off"), ("sunrise", "Sunrise")])
+	submit = SubmitField("Engage!")
 
 class AlarmSetForm(Form):
 	day_select = RadioField(choices=[("tomorrow", "Tomorrow") , ("today", "Today")], default="tomorrow")
@@ -14,6 +15,8 @@ class AlarmSetForm(Form):
 	music_select = RadioField(choices=[("radio3", "BBC Radio 3")])
 	sunrise_select = BooleanField(default = "checked")
 	brew_select = BooleanField(default = "checked")
+	submit = SubmitField("Set alarm")
 
 class MusicForm(Form):
 	music_select = RadioField(choices=[("radio3", "BBC Radio 3")])
+	submit = SubmitField("Make it so!")
