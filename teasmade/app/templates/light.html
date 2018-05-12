@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" name="lightchoice">
+	{{form.hidden_tag()}}
+	{% for subfield in form.radio %}
+    	<tr>
+        	<td>{{ subfield }}</td>
+        	<td>{{ subfield.label }}</td>
+    	</tr>
+	{% endfor %}
+	<p><input type="submit" value="Engage!"></p>
+</form>
+{% endblock %}

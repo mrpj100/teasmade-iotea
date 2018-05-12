@@ -1,0 +1,13 @@
+# teasmade ignore file
+
+*.pyc
+*.png
+
+shairport/
+perl-net-sdp/
+python_games/
+python-spi/
+rpi_ws281x/
+SPI-Py/
+Desktop/
+

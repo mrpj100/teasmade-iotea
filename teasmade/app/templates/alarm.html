@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<form action="" method="post" name="setalarm">
+	{{form.hidden_tag()}}
+	<table>
+	<tr>
+		<th>Alarm set</th>
+	</tr>
+	
+	{% for subfield in form.day_select %}
+	<tr>
+		<td>{{ subfield }}</td>
+		<td>{{ subfield.label }}</td>
+	</tr>
+	{% endfor %}
+	<tr>
+		<td>Hour (24 hr clock)</td><td>Minute</td>
+	</tr>
+	<tr>
+		<td>{{ form.alarm_hour }}</td><td>{{ form.alarm_minute }}</td>
+	</tr>
+	<tr>
+		<th>Music selection</th>
+	</tr>
+	{% for subfield in form.music_select %}
+	<tr>
+		<td>{{ subfield }}</td>
+		<td>{{ subfield.label }}</td>
+	</tr>
+	{% endfor %}
+	<tr>
+		<th>Alarm options</th>
+	</tr>
+	<tr>
+		<td>{{ form.sunrise_select }}</td>
+		<td>Sunrise alarm?</td>
+	</tr>
+	<tr>
+		<td>{{ form.brew_select }}</td>
+		<td>Make tea?</td>
+	</tr>
+	</table>
+	<p><input type = "submit" value = "Set alarm"></p>
+</form>
+{% endblock %}

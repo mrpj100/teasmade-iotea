@@ -1,0 +1,70 @@
+------------------------------------------------------------
+/usr/local/bin/pip run on Sun Mar 27 14:23:48 2016
+Downloading/unpacking uuid
+  Getting page https://pypi.python.org/simple/uuid/
+  URLs to search for versions for uuid:
+  * https://pypi.python.org/simple/uuid/
+  Analyzing links from page https://pypi.python.org/simple/uuid/
+    Found link https://pypi.python.org/packages/source/u/uuid/uuid-1.30.tar.gz#md5=639b310f1fe6800e4bf8aa1dd9333117 (from https://pypi.python.org/simple/uuid/), version: 1.30
+  Downloading uuid-1.30.tar.gz
+  Downloading from URL https://pypi.python.org/packages/source/u/uuid/uuid-1.30.tar.gz#md5=639b310f1fe6800e4bf8aa1dd9333117 (from https://pypi.python.org/simple/uuid/)
+  Running setup.py (path:/tmp/pip_build_pi/uuid/setup.py) egg_info for package uuid
+    running egg_info
+    creating pip-egg-info/uuid.egg-info
+    writing pip-egg-info/uuid.egg-info/PKG-INFO
+    writing top-level names to pip-egg-info/uuid.egg-info/top_level.txt
+    writing dependency_links to pip-egg-info/uuid.egg-info/dependency_links.txt
+    writing manifest file 'pip-egg-info/uuid.egg-info/SOURCES.txt'
+    warning: manifest_maker: standard file '-c' not found
+    
+    reading manifest file 'pip-egg-info/uuid.egg-info/SOURCES.txt'
+    writing manifest file 'pip-egg-info/uuid.egg-info/SOURCES.txt'
+  Source in /tmp/pip_build_pi/uuid has version 1.30, which satisfies requirement uuid
+Installing collected packages: uuid
+  Running setup.py install for uuid
+    Running command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_pi/uuid/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-LQjGLk-record/install-record.txt --single-version-externally-managed --compile
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.linux-armv6l-2.7
+    copying uuid.py -> build/lib.linux-armv6l-2.7
+    running install_lib
+    copying build/lib.linux-armv6l-2.7/uuid.py -> /usr/local/lib/python2.7/dist-packages
+    error: /usr/local/lib/python2.7/dist-packages/uuid.py: Permission denied
+    Complete output from command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_pi/uuid/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-LQjGLk-record/install-record.txt --single-version-externally-managed --compile:
+    running install
+
+running build
+
+running build_py
+
+creating build
+
+creating build/lib.linux-armv6l-2.7
+
+copying uuid.py -> build/lib.linux-armv6l-2.7
+
+running install_lib
+
+copying build/lib.linux-armv6l-2.7/uuid.py -> /usr/local/lib/python2.7/dist-packages
+
+error: /usr/local/lib/python2.7/dist-packages/uuid.py: Permission denied
+
+----------------------------------------
+Cleaning up...
+  Removing temporary dir /tmp/pip_build_pi...
+Command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_pi/uuid/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-LQjGLk-record/install-record.txt --single-version-externally-managed --compile failed with error code 1 in /tmp/pip_build_pi/uuid
+Exception information:
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/pip/basecommand.py", line 122, in main
+    status = self.run(options, args)
+  File "/usr/local/lib/python2.7/dist-packages/pip/commands/install.py", line 283, in run
+    requirement_set.install(install_options, global_options, root=options.root_path)
+  File "/usr/local/lib/python2.7/dist-packages/pip/req.py", line 1435, in install
+    requirement.install(install_options, global_options, *args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/pip/req.py", line 706, in install
+    cwd=self.source_dir, filter_stdout=self._filter_install, show_stdout=False)
+  File "/usr/local/lib/python2.7/dist-packages/pip/util.py", line 697, in call_subprocess
+    % (command_desc, proc.returncode, cwd))
+InstallationError: Command /usr/bin/python -c "import setuptools, tokenize;__file__='/tmp/pip_build_pi/uuid/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /tmp/pip-LQjGLk-record/install-record.txt --single-version-externally-managed --compile failed with error code 1 in /tmp/pip_build_pi/uuid

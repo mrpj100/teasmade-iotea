@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="" method="post" name="music">
+	{{form.hidden_tag()}}
+	<table>
+	<tr>
+		<th>Play music</th>
+	</tr>
+
+	{% for subfield in form.music_select %}
+	<tr>
+		<td>{{ subfield }}</td>
+		<td>{{ subfield.label }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+	<p><input type = "submit" value ="Make it so!"</p>
+</form>
+{% endblock %}
+
